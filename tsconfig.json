@@ -1,6 +1,8 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
+  // "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "node",
+    "module":"esnext",
     "allowJs": true,
     "sourceMap": true,
     "baseUrl": ".",
@@ -8,7 +10,13 @@
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"]
+    // "types": [
+    //   "@dcloudio/types",
+    //   "@types/wechat-miniprogram",
+    //   "@uni-helper/uni-app-types",
+    //   "@uni-helper/uni-ui-types"
+    // ]
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types","@uni-helper/uni-ui-types"]
   },
   "vueCompilerOptions": {
     // experimentalRuntimeMode 已废弃，现调整为 nativeTags，请升级 Volar 插件至最新版本
